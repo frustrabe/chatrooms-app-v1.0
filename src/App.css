@@ -37,6 +37,14 @@
   }
 }
 */
+.App {
+  display: flex;
+}
+
+.Chatrooms {
+  display: flex;
+  flex-direction: column;
+}
 
 .ChatroomListItem {
   margin: 5px;
