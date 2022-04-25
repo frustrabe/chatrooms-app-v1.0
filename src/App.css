@@ -51,7 +51,7 @@
   font-family: monospace;
   font-size: 2em;
   font-weight: bold;
-  border: 3px solid #333;
+  /*border: 3px solid #333;*/
   margin: 10px;
 }
 
@@ -61,7 +61,7 @@
   font-family: monospace;
   font-size: 2em;
   font-weight: bold;
-  border: 3px solid #333;
+  /*border: 3px solid #333;*/
   margin: 10px;
 }
 
@@ -91,7 +91,8 @@
   font-family: monospace;
   margin: 10px;
   font-size: 1.5em;
-  border: 2px solid green;
+  /*border: 2px solid green;*/
+  background-color: darkgray;
 }
 
 /* The style of room tag name*/
@@ -99,6 +100,7 @@
 h2 {
   display: flex;
   justify-content: center;
+  color: white;
 
 }
 
@@ -106,24 +108,49 @@ h2 {
   display: flex;
 }*/
 
+/*Style of recieved messages container*/
+
 .recieved-messages {
   display: flex;
   justify-content: flex-start;
   align-content: space-around;
-  border: 2px solid red;
-  margin-bottom: 1%;
+  /*border: 2px solid red;*/
+  color: white;
+  margin-bottom: 20px;
 }
+
+/*Style of recieved messages text box*/
+.recieved-message-text {
+  padding: 15px;
+  min-height: 20px;
+  background: #e87e15;
+  border-radius: 5px 20px 20px 5px;
+  margin-bottom: 10px;
+}
+
+/*Style of sent messages container*/
 
 .sent-messages {
   display: flex;
   justify-content: flex-end;
   align-content: space-around;
-  border: 2px solid blue;
+  /*border: 2px solid blue;*/
+  color: white;
 }
 
+/*Style of sent messages text box*/
+
+.sent-message-text {
+  padding: 15px;
+  min-height: 20px;
+  background: #676fde;
+  border-radius: 20px 5px 5px 20px;
+  margin-bottom: 10px;
+}
 
 .Toolbox {
   display: flex;
   flex-direction: row;
-  border: 2px solid #333;
+  /*border: 2px solid #333;*/
+  color: white;
 }

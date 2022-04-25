@@ -1,8 +1,9 @@
-import Messages from "./Messages";
+import MessagesRecieved from "./MessagesRecieved";
 import Toolbox from "./Toolbox";
 import { useParams } from "react-router-dom";
 import { getChatrooms } from "../data/chatrooms";
 import NotFound from "./NotFound";
+import MessagesSent from "./MessagesSent";
 
 export default function Chatroom({ id }) {
     //We find current opened chatroom id from route parameters
@@ -24,10 +25,10 @@ export default function Chatroom({ id }) {
             <h2> {name} </h2>
             <div className="messages-window">
                 <div className="recieved-messages">
-                    <Messages />
+                    <MessagesRecieved />
                 </div>
                 <div className="sent-messages">
-                    <Messages />
+                    <MessagesSent />
                 </div>
             </div>
             <Toolbox />
