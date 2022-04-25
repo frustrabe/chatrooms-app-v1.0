@@ -37,17 +37,93 @@
   }
 }
 */
-.App {
+
+/* The splash screen container style*/
+.flexbox-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* The App.js component style*/
+
+.App {
+  font-family: monospace;
+  font-size: 2em;
+  font-weight: bold;
+  border: 3px solid #333;
+  margin: 10px;
+}
+
+/* The login screen style*/
+
+.Login {
+  font-family: monospace;
+  font-size: 2em;
+  font-weight: bold;
+  border: 3px solid #333;
+  margin: 10px;
+}
+
+/* The chatrooms overview screen style*/
 
 .Chatrooms {
   display: flex;
   flex-direction: column;
+  font-family: monospace;
+  margin: 10px;
+  font-size: 1.5em;
 }
 
+/* The chatrooms style*/
+
 .ChatroomListItem {
-  margin: 5px;
-  padding: 5px;
-  background: lightgray;
+  border: 1px solid lightslategray;
+  margin: 7px;
+  background: gray;
+}
+
+/* The individual chatroom style*/
+
+.Chatroom {
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  margin: 10px;
+  font-size: 1.5em;
+  border: 2px solid green;
+}
+
+/* The style of room tag name*/
+
+h2 {
+  display: flex;
+  justify-content: center;
+
+}
+
+/*.messages-window {
+  display: flex;
+}*/
+
+.recieved-messages {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-around;
+  border: 2px solid red;
+  margin-bottom: 1%;
+}
+
+.sent-messages {
+  display: flex;
+  justify-content: flex-end;
+  align-content: space-around;
+  border: 2px solid blue;
+}
+
+
+.Toolbox {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #333;
 }

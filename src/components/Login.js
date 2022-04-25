@@ -1,7 +1,9 @@
 export default function Login() {
     return (
-        <div className="Login">
-            Login
+        <div className="flexbox-container">
+            <div className="Login">
+                Login
+            </div>
         </div>
     );
 }

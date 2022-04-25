@@ -22,7 +22,14 @@ export default function Chatroom({ id }) {
     return (
         <div className="Chatroom">
             <h2> {name} </h2>
-            <Messages />
+            <div className="messages-window">
+                <div className="recieved-messages">
+                    <Messages />
+                </div>
+                <div className="sent-messages">
+                    <Messages />
+                </div>
+            </div>
             <Toolbox />
         </div>
     );

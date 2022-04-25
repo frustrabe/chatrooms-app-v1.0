@@ -1,37 +1,37 @@
 const chatrooms = [
     {
         "id": 1,
-        "name": 'music',
-        "description": 'dummy description'
+        "name": 'Music 🎷',
+        "description": 'Enjoy the vibes, welcome to the room about music!'
     },
     {
         "id": 2,
-        "name": 'books',
-        "description": 'dummy description'
+        "name": 'Books 📚',
+        "description": 'Hi, and welcome to the hub of book lovers!'
     },
     {
         "id": 3,
-        "name": 'coding',
-        "description": 'dummy description'
+        "name": 'Coding 💻',
+        "description": '<Hello World, room compiled successfully!/>'
     },
     {
         "id": 4,
-        "name": 'running',
-        "description": 'dummy description'
+        "name": 'Running 👟',
+        "description": 'Hey! Put on the shoes and go for it!'
     },
     {
         "id": 5,
-        "name": 'gaming',
-        "description": 'dummy description'
+        "name": 'Gaming 🕹️',
+        "description": 'For all the gaming connoisseurs, press to play.'
     },
     {
         "id": 6,
-        "name": 'crypto',
-        "description": 'dummy description'
+        "name": 'Crypto 🐕',
+        "description": 'To the moon!'
     }, {
         "id": 7,
-        "name": 'weather',
-        "description": 'dummy description'
+        "name": 'Weather 🌧️',
+        "description": 'Its definitely sunny somewhere on the planet!'
     },
 ]
 

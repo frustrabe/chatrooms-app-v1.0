@@ -21,6 +21,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="login" element={<Login />} />
         <Route path="chatrooms" element={<Chatrooms />} />
+        <Route path="chatrooms/:chatroomId" element={<Chatroom />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
