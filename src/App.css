@@ -89,10 +89,10 @@
   display: flex;
   flex-direction: column;
   font-family: monospace;
-  margin: 10px;
+  margin: 5px;
   font-size: 1.5em;
   /*border: 2px solid green;*/
-  background-color: darkgray;
+  background-color: #7DAEA7;
 }
 
 /* The style of room tag name*/
@@ -100,8 +100,10 @@
 h2 {
   display: flex;
   justify-content: center;
-  color: white;
-
+  color: #007756;
+  border: 3px solid lightslategray;
+  padding: 5px;
+  border-radius: 25px;
 }
 
 /*.messages-window {
@@ -117,13 +119,15 @@ h2 {
   /*border: 2px solid red;*/
   color: white;
   margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 /*Style of recieved messages text box*/
 .recieved-message-text {
   padding: 15px;
   min-height: 20px;
-  background: #e87e15;
+  background: #F96700;
   border-radius: 5px 20px 20px 5px;
   margin-bottom: 10px;
 }
@@ -136,6 +140,8 @@ h2 {
   align-content: space-around;
   /*border: 2px solid blue;*/
   color: white;
+  margin-right: 5px;
+  margin-left: 10px;
 }
 
 /*Style of sent messages text box*/
@@ -143,14 +149,32 @@ h2 {
 .sent-message-text {
   padding: 15px;
   min-height: 20px;
-  background: #676fde;
+  background: #007756;
   border-radius: 20px 5px 5px 20px;
   margin-bottom: 10px;
 }
+
+/*Style of toolbox*/
 
 .Toolbox {
   display: flex;
   flex-direction: row;
   /*border: 2px solid #333;*/
   color: white;
+  align-items: center;
+
+}
+
+.input {
+  display: block;
+  margin: 15px auto;
+  max-width: 500px;
+  width: 100%;
+  justify-content: right;
+}
+
+.Send {
+  width: auto;
+  height: auto;
+  background-color: lightblue;
 }
