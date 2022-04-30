@@ -43,12 +43,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 /* The App.js component style*/
 
 .App {
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 2em;
   font-weight: bold;
   /*border: 3px solid #333;*/
@@ -58,7 +59,7 @@
 /* The login screen style*/
 
 .Login {
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 2em;
   font-weight: bold;
   /*border: 3px solid #333;*/
@@ -70,7 +71,7 @@
 .Chatrooms {
   display: flex;
   flex-direction: column;
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   margin: 10px;
   font-size: 1.5em;
 }
@@ -88,11 +89,11 @@
 .Chatroom {
   display: flex;
   flex-direction: column;
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   margin: 5px;
-  font-size: 1.5em;
-  /*border: 2px solid green;*/
-  background-color: #7DAEA7;
+  font-size: 15px;
+  /* border: 2px solid green;*/
+  background-color: #96BAFF;
 }
 
 /* The style of room tag name*/
@@ -100,10 +101,11 @@
 h2 {
   display: flex;
   justify-content: center;
-  color: #007756;
-  border: 3px solid lightslategray;
+  box-sizing: border-box;
+  color: #4700D8;
+  /*border: 2px solid lightslategray;*/
   padding: 5px;
-  border-radius: 25px;
+  border-radius: 8px;
 }
 
 /*.messages-window {
@@ -127,7 +129,7 @@ h2 {
 .recieved-message-text {
   padding: 15px;
   min-height: 20px;
-  background: #F96700;
+  background: #7C83FD;
   border-radius: 5px 20px 20px 5px;
   margin-bottom: 10px;
 }
@@ -149,7 +151,7 @@ h2 {
 .sent-message-text {
   padding: 15px;
   min-height: 20px;
-  background: #007756;
+  background: #4700D8;
   border-radius: 20px 5px 5px 20px;
   margin-bottom: 10px;
 }
@@ -158,23 +160,51 @@ h2 {
 
 .Toolbox {
   display: flex;
-  flex-direction: row;
-  /*border: 2px solid #333;*/
-  color: white;
-  align-items: center;
-
-}
-
-.input {
-  display: block;
-  margin: 15px auto;
-  max-width: 500px;
+  float: left;
+  box-sizing: border-box;
+  justify-content: space-between;
   width: 100%;
-  justify-content: right;
+  align-items: center;
+  color: white;
+  /*border: 2px solid #333;*/
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px 0px 10px 0px;
+  background-color: #96BAFF;
 }
 
 .Send {
-  width: auto;
-  height: auto;
-  background-color: lightblue;
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  width: 20%;
+  float: right;
+  font-size: 18px;
+  background-color: #4700D8;
+  border-radius: 15px 15px;
+  padding: 10px 5px 10px 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Input {
+  float: left;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 15px;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 18px;
+  color: #000;
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  padding: 5px;
+  outline: none;
+  font-size: 15px;
 }
