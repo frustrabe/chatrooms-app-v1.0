@@ -5,6 +5,7 @@ import { getChatrooms } from "../data/chatrooms";
 import NotFound from "./NotFound";
 import MessagesSent from "./MessagesSent";
 
+
 export default function Chatroom({ id }) {
     //We find current opened chatroom id from route parameters
     let params = useParams();

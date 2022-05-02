@@ -114,8 +114,9 @@ h2 {
 
 /*Style of recieved messages container*/
 
-.recieved-messages {
+.recieved-message {
   display: flex;
+  flex-grow: 1;
   justify-content: flex-start;
   align-content: space-around;
   /*border: 2px solid red;*/
@@ -125,8 +126,21 @@ h2 {
   margin-right: 10px;
 }
 
+/*Style of avatar of recieved message*/
+
+.recieved-messages>div:first-child>img.userAvatar {
+  display: flex;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 2px 2px;
+}
+
 /*Style of recieved messages text box*/
+
 .recieved-message-text {
+  text-align: left;
   padding: 15px;
   min-height: 20px;
   background: #7C83FD;
@@ -136,8 +150,9 @@ h2 {
 
 /*Style of sent messages container*/
 
-.sent-messages {
+.sent-message {
   display: flex;
+  flex-grow: 1;
   justify-content: flex-end;
   align-content: space-around;
   /*border: 2px solid blue;*/
@@ -146,9 +161,21 @@ h2 {
   margin-left: 10px;
 }
 
+/*Style of avatar of sent message*/
+
+.sent-messages>div:first-child>img.meAvatar {
+  display: flex;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 2px 2px;
+}
+
 /*Style of sent messages text box*/
 
 .sent-message-text {
+  text-align: right;
   padding: 15px;
   min-height: 20px;
   background: #4700D8;
@@ -172,7 +199,9 @@ h2 {
   background-color: #96BAFF;
 }
 
+
 .Send {
+  cursor: pointer;
   display: flex;
   justify-content: space-evenly;
   box-sizing: border-box;
@@ -184,6 +213,10 @@ h2 {
   padding: 10px 5px 10px 5px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.Send::hover {
+  opacity: 0.7;
 }
 
 .Input {
