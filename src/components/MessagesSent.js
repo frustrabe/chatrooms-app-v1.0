@@ -4,8 +4,7 @@ import MeAvatar from "./MeAvatar";
 export default function MessagesSent() {
     return (
         <div className="MessagesSent">
-            <MeAvatar />
-            <BubbleSent />
+            <MeAvatar /> <BubbleSent />
         </div>
     );
 }

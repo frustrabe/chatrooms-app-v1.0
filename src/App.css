@@ -44,6 +44,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
+  margin-top: 30%;
+  margin-bottom: 10%;
+
 }
 
 /* The App.js component style*/
@@ -73,15 +77,38 @@
   flex-direction: column;
   font-family: 'Roboto Mono', monospace;
   margin: 10px;
-  font-size: 1.5em;
+  margin-top: 5%;
 }
 
-/* The chatrooms style*/
+/* The chatrooms page style*/
 
 .ChatroomListItem {
-  border: 1px solid lightslategray;
-  margin: 7px;
-  background: gray;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 12px;
+  background: #96BAFF;
+}
+
+
+/*Style of chatroom name description*/
+
+.chatroom-name-text {
+  border-radius: 10px;
+  font-family: 'Roboto Mono', monospace;
+  color: #4700D8;
+  margin: 10px;
+  margin-left: 10px;
+  background: #96BAFF;
+  font-size: 2em;
+}
+
+/*Style of chatroom description*/
+
+.description-text {
+  font-family: 'Roboto Mono', monospace;
+  color: gray;
+  margin: 10px;
+  font-size: 1em;
 }
 
 /* The individual chatroom style*/
@@ -90,7 +117,7 @@
   display: flex;
   flex-direction: column;
   font-family: 'Roboto Mono', monospace;
-  margin: 5px;
+  margin: 15px;
   font-size: 15px;
   /* border: 2px solid green;*/
   background-color: #96BAFF;
@@ -101,20 +128,15 @@
 h2 {
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
   color: #4700D8;
   /*border: 2px solid lightslategray;*/
   padding: 5px;
-  border-radius: 8px;
+  margin-bottom: 10%;
 }
-
-/*.messages-window {
-  display: flex;
-}*/
 
 /*Style of recieved messages container*/
 
-.recieved-message {
+.received-message {
   display: flex;
   flex-grow: 1;
   justify-content: flex-start;
@@ -128,18 +150,17 @@ h2 {
 
 /*Style of avatar of recieved message*/
 
-.recieved-messages>div:first-child>img.userAvatar {
-  display: flex;
+.received-messages>div:first-child>img.userAvatar {
   float: left;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: 2px 2px;
+  margin: 5px 5px;
 }
 
 /*Style of recieved messages text box*/
 
-.recieved-message-text {
+.received-message-text {
   text-align: left;
   padding: 15px;
   min-height: 20px;
@@ -169,7 +190,7 @@ h2 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: 2px 2px;
+  margin: 5px 5px;
 }
 
 /*Style of sent messages text box*/
@@ -213,10 +234,6 @@ h2 {
   padding: 10px 5px 10px 5px;
   margin-left: 5px;
   margin-right: 5px;
-}
-
-.Send::hover {
-  opacity: 0.7;
 }
 
 .Input {

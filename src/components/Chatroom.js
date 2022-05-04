@@ -1,4 +1,4 @@
-import MessagesRecieved from "./MessagesRecieved";
+import MessagesReceived from "./MessagesReceived";
 import Toolbox from "./Toolbox";
 import { useParams } from "react-router-dom";
 import { getChatrooms } from "../data/chatrooms";
@@ -25,8 +25,8 @@ export default function Chatroom({ id }) {
         <div className="Chatroom">
             <h2> {name} </h2>
             <div className="messages-window">
-                <div className="recieved-messages">
-                    <MessagesRecieved />
+                <div className="received-messages">
+                    <MessagesReceived />
                 </div>
                 <div className="sent-messages">
                     <MessagesSent />
