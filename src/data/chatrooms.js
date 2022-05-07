@@ -1,3 +1,6 @@
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+
 const chatrooms = [
   {
     id: 1,
@@ -73,6 +76,19 @@ const chatrooms = [
   },
 ];
 
-export function getChatrooms() {
+export async function getChatrooms() {
+  const chatrooms = [];
+
+  const querySnapshot = await getDocs(collection(db, "chatrooms"));
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+    chatrooms.push({
+      id: doc.id,
+      name: doc.data().name,
+      description: doc.data().description,
+    });
+  });
+
   return chatrooms;
 }
