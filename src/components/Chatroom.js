@@ -4,35 +4,41 @@ import { useParams } from "react-router-dom";
 import { getChatrooms } from "../data/chatrooms";
 import NotFound from "./NotFound";
 import MessagesSent from "./MessagesSent";
-
+import BubbleReceived from "./BubbleReceived";
+import BubbleSent from "./BubbleSent";
 
 export default function Chatroom({ id }) {
-    //We find current opened chatroom id from route parameters
-    let params = useParams();
-    const { chatroomId } = params
+  //We find current opened chatroom id from route parameters
+  let params = useParams();
+  const { chatroomId } = params;
 
-    //We filter the chatroom data by current chatroom id
-    const chatrooms = getChatrooms()
-    //We are comparing two different types here. Thats why we use parseInt -
-    // to change the type of params.chatroomId from a string to a number (int).
-    const chatroom = chatrooms.find(chatroom => chatroom.id === parseInt(chatroomId))
+  //We filter the chatroom data by current chatroom id
+  const chatrooms = getChatrooms();
+  //We are comparing two different types here. Thats why we use parseInt -
+  // to change the type of params.chatroomId from a string to a number (int).
+  const chatroom = chatrooms.find(
+    (chatroom) => chatroom.id === parseInt(chatroomId)
+  );
 
-    if (!chatroom) return <NotFound />
+  if (!chatroom) return <NotFound />;
 
-    const { name } = chatroom
+  const currentUserId = 3;
 
-    return (
-        <div className="Chatroom">
-            <h2> {name} </h2>
-            <div className="messages-window">
-                <div className="received-messages">
-                    <MessagesReceived />
-                </div>
-                <div className="sent-messages">
-                    <MessagesSent />
-                </div>
-            </div>
-            <Toolbox />
-        </div>
-    );
+  const { name, messages } = chatroom;
+
+  return (
+    <div className="Chatroom">
+      <h2> {name} </h2>
+      <div className="messages-window">
+        {messages.map((message) => {
+          if (message.user_id === currentUserId) {
+            return <BubbleSent text={message.text} name={message.name} />;
+          } else {
+            return <BubbleReceived text={message.text} name={message.name} />;
+          }
+        })}
+      </div>
+      <Toolbox />
+    </div>
+  );
 }
