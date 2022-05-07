@@ -1,4 +1,11 @@
-import { collection, getDocs } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  getDoc,
+  doc,
+  setDoc,
+  addDoc,
+} from "firebase/firestore";
 import { db } from "../firebase";
 
 const chatrooms = [
@@ -81,8 +88,6 @@ export async function getChatrooms() {
 
   const querySnapshot = await getDocs(collection(db, "chatrooms"));
   querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
     chatrooms.push({
       id: doc.id,
       name: doc.data().name,
@@ -91,4 +96,34 @@ export async function getChatrooms() {
   });
 
   return chatrooms;
+}
+
+export async function getChatroom(id) {
+  const docRef = doc(db, "chatrooms", id);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    // const messages = await getDocs(collection(db, "chatrooms"));
+
+    const chatroom = {
+      id: id,
+      name: docSnap.data().name,
+      description: docSnap.data().description,
+      messages: docSnap.data().messages,
+    };
+
+    return chatroom;
+  }
+
+  return null;
+}
+
+export async function saveMessage(message, chatroom_id) {
+  // Add a new document in collection "cities"
+
+  await addDoc(collection(db, "chatrooms", chatroom_id, "messages"), {
+    id: "a",
+    text: "Hey what did you think about the new Red Hot Chili Peppers album?",
+    user_id: 1,
+  });
 }
