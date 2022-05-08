@@ -6,6 +6,7 @@ import NotFound from "./NotFound";
 import BubbleReceived from "./BubbleReceived";
 import BubbleSent from "./BubbleSent";
 import { useEffect, useState } from "react";
+import { auth } from "../firebase";
 
 export default function Chatroom() {
   //We find current opened chatroom id from route parameters
@@ -24,7 +25,7 @@ export default function Chatroom() {
 
   if (!chatroom) return <NotFound />;
 
-  const currentUserId = 3;
+  const currentUserId = auth.currentUser.uid;
 
   const { name, messages } = chatroom;
 
@@ -36,7 +37,7 @@ export default function Chatroom() {
       <div className="messages-window">
         {messages &&
           messages.map((message) => {
-            if (message.user_id === currentUserId) {
+            if (message.uid === currentUserId) {
               return <BubbleSent text={message.text} name={message.name} />;
             } else {
               return <BubbleReceived text={message.text} name={message.name} />;

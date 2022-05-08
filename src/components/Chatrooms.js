@@ -11,6 +11,7 @@ export default function Chatrooms() {
       const chatrooms = await getChatrooms();
       setChatrooms(chatrooms);
     };
+
     fetchData();
   }, []);
 
