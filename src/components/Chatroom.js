@@ -2,7 +2,6 @@ import Toolbox from "./Toolbox";
 import { useParams } from "react-router-dom";
 import { getChatroom } from "../data/chatrooms";
 import NotFound from "./NotFound";
-
 import BubbleReceived from "./BubbleReceived";
 import BubbleSent from "./BubbleSent";
 import { useEffect, useState } from "react";
